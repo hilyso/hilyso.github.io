@@ -1,0 +1,41 @@
+{% macro render(node) %}
+
+  {%- set itemURL = node.path %}
+  <li class="menu-item menu-item-{{ node.name | lower | replace(' ', '-') }}">
+
+    {%- set menuIcon = '<i class="' + node.icon + ' fa-fw"></i>' if theme.menu_settings.icons and node.icon else '' %}
+    {%- set menuText = __('menu.' + node.name) | replace('menu.', '') %}
+
+<!--分类文章数量-->
+
+
+    {%- set menuBadge = '' %}
+    {%- if theme.menu_settings.badges %}
+      {%- set badges = {
+        archives    : site.posts.length,
+        categories  : site.categories.length,
+        tags        : site.tags.length,
+        Linux       : site.categories.findOne({name: 'Linux'}).length,
+        DevOps      : site.categories.findOne({name: 'DevOps'}).length,
+        NetWork     : site.categories.findOne({name: 'NetWork'}).length,
+        Database    : site.categories.findOne({name: 'Database'}).length,
+        KVM         : site.categories.findOne({name: 'KVM'}).length,
+      'CI/CD'       : site.categories.findOne({name: 'CI/CD'}).length,
+        Monitor     : site.categories.findOne({name: 'Monitor'}).length,
+        K8S         : site.categories.findOne({name: 'K8S'}).length,
+        Docker      : site.categories.findOne({name: 'Docker'}).length,
+        OpenWrt     : site.categories.findOne({name: 'OpenWrt'}).length
+        }
+      %}
+      {%- for menu, count in badges %}
+        {%- if node.name == menu %}
+          {%- set menuBadge = '<span class="badge">' + count + '</span>' %}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif %}
+
+    {{- next_url(itemURL, menuIcon + menuText + menuBadge, {rel: 'section'}) -}}
+
+  </li>
+
+{% endmacro %}
