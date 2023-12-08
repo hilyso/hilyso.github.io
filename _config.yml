@@ -104,7 +104,7 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/hilyso/blog.git
-  branch: gh-pages
+  branch: master
   
 search:
   path: ./node_modules/hexo-generator-searchdb/templates/search.xml
