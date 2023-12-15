@@ -1,5 +1,4 @@
 .git/
-*.json
 *.log
 node_modules/
 public/
