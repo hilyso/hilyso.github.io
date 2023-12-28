@@ -26,9 +26,9 @@ custom_file_path:
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
-  #variable: source/_data/variables.styl
+  variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -101,10 +101,10 @@ menu:
   archives: /archives/ || fa fa-archive
   #commonweal: /404/ || fa fa-heartbeat
   Linux: /categories/Linux || fa fa-brands fa-linux
-  DevOps: /categories/DevOps || fa fa-solid fa-code
+  #DevOps: /categories/DevOps || fa fa-solid fa-code
   NetWork: /categories/NetWork || fa fa-solid fa-network-wired
   Database: /categories/Database || fa fa-solid fa-database
-  KVM: /categories/KVM || fa fa-desktop
+  #KVM: /categories/KVM || fa fa-desktop
   #Security: /categories/Security || fa fa-solid fa-shield-halved
   #CentOS: /categories/CentOS || fa fa-brands fa-centos
   #Ubuntu: /categories/Ubuntu || fa fa-brands fa-ubuntu
@@ -166,7 +166,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
+  GitHub: https://github.com/hilyso || fab fa-github
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -267,8 +267,11 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
-  separated_meta: true
-  item_text_total: false
+  separated_meta: true  # 是否换行显示 字数统计 及 阅读时长
+  item_text_post: true  # 文章 字数统计 阅读时长 使用图标 还是 文本表示
+  item_text_total: true # 博客底部统计 字数统计 阅读时长 使用图标 还是 文本表示
+  awl: 4
+  wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
@@ -298,8 +301,14 @@ follow_me:
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
 related_posts:
   enable: true
-  icon: fa fa-signs-post
-
+  title: 相关文章推荐      # 属性的命名
+  display_in_home: true # false代表首页不显示
+  params:
+    maxCount: 5          # 最多5条
+    #PPMixingRate: 0.0   # 相关度
+    #isDate: true        # 是否显示日期
+    #isImage: false      # 是否显示配图
+    isExcerpt: false     # 是否显示摘要
 
 # Post edit
 # Easily browse and edit blog source code online.

@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: mdzz
+title: hilyso
 subtitle: ''
 description: ''
 keywords:
-author: mdzz
+author: hilyso
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -107,10 +107,12 @@ deploy:
   branch: master
   
 search:
-  path: ./node_modules/hexo-generator-searchdb/templates/search.xml
+#  path: ./node_modules/hexo-generator-searchdb/templates/search.xml
+  path: search.json
   field: post
   content: true
   format: html
+  limit: 1000
 
 sitemap:
   path: 
@@ -132,3 +134,12 @@ related_posts:
     #isDate: true        # 是否显示日期
     #isImage: false      # 是否显示配图
     isExcerpt: false     # 是否显示摘要
+
+symbols_count_time:
+ #文章内是否显示
+  symbols: true
+  time: true
+ # 网页底部是否显示
+  total_symbols: true
+  total_time: true
+
