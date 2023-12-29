@@ -36,7 +36,7 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Gemini
+scheme: Pisces
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
@@ -299,16 +299,16 @@ follow_me:
 
 # Related popular posts
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
-related_posts:
-  enable: true
-  title: 相关文章推荐      # 属性的命名
-  display_in_home: true # false代表首页不显示
-  params:
-    maxCount: 5          # 最多5条
-    #PPMixingRate: 0.0   # 相关度
-    #isDate: true        # 是否显示日期
-    #isImage: false      # 是否显示配图
-    isExcerpt: false     # 是否显示摘要
+# related_posts:
+#   enable: true
+#   title: 相关文章推荐      # 属性的命名
+#   display_in_home: true # false代表首页不显示
+#   params:
+#     maxCount: 5          # 最多5条
+#     #PPMixingRate: 0.0   # 相关度
+#     #isDate: true        # 是否显示日期
+#     #isImage: false      # 是否显示配图
+#     isExcerpt: false     # 是否显示摘要
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -384,20 +384,20 @@ codeblock:
   # All available themes: https://theme-next.js.org/highlight/
   theme:
     light: default
-    dark: stackoverflow-light
+    dark: stackoverflow-dark
   prism:
     light: prism
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: default
     # Available values: default | flat | mac
     style:
 
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
   scrollpercent: true
 

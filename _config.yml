@@ -124,17 +124,6 @@ sitemap:
   tags: true
   categories: true
 
-related_posts:
-  enable: true
-  title: 相关文章推荐      # 属性的命名
-  display_in_home: false # false代表首页不显示
-  params:
-    maxCount: 5          # 最多5条
-    #PPMixingRate: 0.0   # 相关度
-    #isDate: true        # 是否显示日期
-    #isImage: false      # 是否显示配图
-    isExcerpt: false     # 是否显示摘要
-
 symbols_count_time:
  #文章内是否显示
   symbols: true
@@ -143,3 +132,12 @@ symbols_count_time:
   total_symbols: true
   total_time: true
 
+recommended_posts:
+  #server: https://api.truelaurel.com #后端推荐服务器地址
+  timeoutInMillis: 10000 #服务时长，超过此时长，则使用离线推荐模式
+  internalLinks: 3 #内部文章数量
+  externalLinks: 1 #外部文章数量
+  fixedNumber: false
+  autoDisplay: true #自动在文章底部显示推荐文章
+  excludePattern: []
+  titleHtml: <h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1> #自定义标题
