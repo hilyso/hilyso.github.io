@@ -101,7 +101,7 @@ menu:
   archives: /archives/ || fa fa-archive
   #commonweal: /404/ || fa fa-heartbeat
   Linux: /categories/Linux || fa fa-brands fa-linux
-  #DevOps: /categories/DevOps || fa fa-solid fa-code
+  DevOps: /categories/DevOps || fa fa-solid fa-code
   NetWork: /categories/NetWork || fa fa-solid fa-network-wired
   Database: /categories/Database || fa fa-solid fa-database
   #KVM: /categories/KVM || fa fa-desktop
