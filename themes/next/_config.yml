@@ -105,7 +105,7 @@ menu:
   NetWork: /categories/NetWork || fa fa-solid fa-network-wired
   Database: /categories/Database || fa fa-solid fa-database
   #KVM: /categories/KVM || fa fa-desktop
-  #Security: /categories/Security || fa fa-solid fa-shield-halved
+  Security: /categories/Security || fa fa-solid fa-shield-halved
   #CentOS: /categories/CentOS || fa fa-brands fa-centos
   #Ubuntu: /categories/Ubuntu || fa fa-brands fa-ubuntu
   CI/CD: /categories/CI-CD || fa fa-refresh
