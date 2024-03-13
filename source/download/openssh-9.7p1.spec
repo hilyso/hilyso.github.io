@@ -214,7 +214,7 @@ CFLAGS="$RPM_OPT_FLAGS -Os"; export CFLAGS
 	--mandir=%{_mandir} \
 	--with-mantype=man \
 	--disable-strip \
-        --with-ssl-dir=/usr/local/openssl-1.1.1w \
+        --with-ssl-dir=/usr/openssl \
 %if ! %{without_openssl}
 	--without-openssl \
 %endif
