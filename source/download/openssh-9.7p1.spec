@@ -215,9 +215,6 @@ CFLAGS="$RPM_OPT_FLAGS -Os"; export CFLAGS
 	--with-mantype=man \
 	--disable-strip \
         --with-ssl-dir=/usr/openssl \
-%if ! %{without_openssl}
-	--without-openssl \
-%endif
 %if %{scard}
 	--with-smartcard \
 %endif
@@ -277,6 +274,7 @@ install -d $RPM_BUILD_ROOT/etc/pam.d/
 install -d $RPM_BUILD_ROOT/etc/rc.d/init.d
 install -d $RPM_BUILD_ROOT%{_libexecdir}/openssh
 #install -m644 contrib/redhat/sshd.pam  $RPM_BUILD_ROOT/etc/pam.d/sshd
+install -m644 /etc/pam.d/sshd     $RPM_BUILD_ROOT/etc/pam.d/sshd
 install -m755 contrib/redhat/sshd.init $RPM_BUILD_ROOT/etc/rc.d/init.d/sshd
 
 %if ! %{no_x11_askpass}
@@ -409,7 +407,7 @@ fi
 %attr(0644,root,root) %{_mandir}/man8/sftp-server.8*
 %attr(0755,root,root) %dir %{_sysconfdir}/ssh
 %attr(0600,root,root) %config(noreplace) %{_sysconfdir}/ssh/sshd_config
-#%attr(0600,root,root) %config(noreplace) /etc/pam.d/sshd
+%attr(0600,root,root) %config(noreplace) /etc/pam.d/sshd
 %attr(0755,root,root) %config /etc/rc.d/init.d/sshd
 %endif
 
