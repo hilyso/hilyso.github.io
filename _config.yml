@@ -110,3 +110,9 @@ search:
   content: true
   format: html
   limit: 1000
+
+excerpt:
+  depth: 1 
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
